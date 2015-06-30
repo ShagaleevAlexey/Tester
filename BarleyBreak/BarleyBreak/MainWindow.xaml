@@ -1,0 +1,19 @@
+﻿<Controls:MetroWindow x:Name="w_mainWindow" x:Class="BarleyBreak.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls" 
+        Title="Barley Break" Height="374.831" Width="609.34" Activated="w_mainWindow_Activated"
+        Loaded="w_mainWindow_Loaded" SizeChanged="w_mainWindow_SizeChanged"
+        GlowBrush="{DynamicResource AccentColorBrush}">
+    <Grid x:Name="vis_g_mainGrid">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="248"/>
+            <ColumnDefinition x:Name="cd_mainField"/>
+        </Grid.ColumnDefinitions>
+        <Border x:Name="vis_b_mainBorder" BorderBrush="Black" BorderThickness="1" Margin="0, 15" HorizontalAlignment="Center" Width="{Binding ActualHeight, ElementName=vis_b_mainBorder, Mode=OneWay}" Grid.Column="1"/>
+        <Button x:Name="vis_btn_startLogical" Content="Start" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="75" Click="vis_btn_startLogical_Click" Height="21"/>
+        <ListBox x:Name="vis_lb_history" BorderThickness="1" BorderBrush="{DynamicResource AccentColorBrush}" Margin="10,41,10,15.6" SelectionChanged="vis_lb_history_SelectionChanged"/>
+        <Button x:Name="vis_btn_undo" Content="Undo" Margin="0,10,10,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="75" Click="Button_Click_1"/>
+
+    </Grid>
+</Controls:MetroWindow>
